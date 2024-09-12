@@ -13,7 +13,7 @@ images:
   newName: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/
 - name: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/mid2-backend
   newName: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/mid2-backend
-  newTag: ad9891bc-backend
+  newTag: 47721813-backend
 - name: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/mid2-frontend
   newName: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/mid2-frontend
-  newTag: ad9891bc-frontend
+  newTag: 47721813-frontend
