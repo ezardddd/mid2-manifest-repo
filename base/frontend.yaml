@@ -15,7 +15,7 @@ spec:
     spec: 
       containers: 
         - name: frontend 
-          image: ezardhigh/mid2front:6
+          image: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/mid2-frontend:latest
           ports: 
             - containerPort: 3000
           env:

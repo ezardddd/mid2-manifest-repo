@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ezardhigh/mid2back:5
+        image: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/mid2-backend:latest
         ports:
         - containerPort: 8000
         env:
