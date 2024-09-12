@@ -2,6 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-server
-  namespace: myapp
+  namespace: team2-test
   labels:
     env: dev

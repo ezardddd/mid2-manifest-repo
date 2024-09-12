@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../../base
-namespace: myapp
+namespace: team2-test
 patches:
 - path: backend-deployment-patch.yaml
 - path: backend-service-patch.yaml

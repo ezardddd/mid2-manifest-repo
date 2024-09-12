@@ -1,13 +1,12 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
 metadata:
   name: backend-server
-  namespace: myapp
+  namespace: team2-test
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      app: backend
+    app: backend
   template:
     metadata:
       labels:
@@ -15,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: esjwoo/mini-back:latest
+        image: ezardhigh/mid2back:5
         ports:
         - containerPort: 8000
         env:
@@ -38,7 +37,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend-service
-  namespace: myapp
+  namespace: team2-test
 spec:
   type: ClusterIP
   selector:
