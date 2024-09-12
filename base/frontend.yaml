@@ -7,7 +7,7 @@ spec:
   selector: 
     matchLabels: 
       app: frontend 
-  replicas: 2
+  replicas: 1
   template: 
     metadata: 
       labels: 
@@ -20,27 +20,27 @@ spec:
             - containerPort: 3000
           env:
             - name: NODE_ENV
-              value: "production"
+              value: production
             - name: JWT_SECRET
-              value: "thisIsMySecretKey"
+              value: thisIsMySecretKey
             - name: PORT
-              value: "443"
+              value: "3000"
             - name: BACKEND_HOST
-              value: "backend-service"
+              value: backend-service
             - name: BACKEND_PORT
               value: "8000"
             - name: CHATBOT_HOST
-              value: "backend-service"
+              value: backend-service
             - name: CHATBOT_PORT
               value: "8000"
             - name: CLIENT_ID
-              value: "7hI4IYFb2ETaTtFDe95B"
+              value: 7hI4IYFb2ETaTtFDe95B
             - name: CLIENT_SECRET
-              value: "1Yt9Y3DRw9"
+              value: 1Yt9Y3DRw9
             - name: REDIRECT_URI
-              value: "https://192.168.121.136:30001/naverlogin/login"
+              value: https://192.168.121.136:30001/naverlogin/login
             - name: JAVASCRIPT_APPKEY
-              value: "4b5ecb6281d617d7a988622ad24d251b"
+              value: 4b5ecb6281d617d7a988622ad24d251b
 --- 
 apiVersion: v1 
 kind: Service 
@@ -53,5 +53,6 @@ spec:
     app: frontend
   ports:
     - protocol: TCP
+      # port: 9443
       port: 3000
       targetPort: 3000
